@@ -3,9 +3,9 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\Oder */
+/* @var $model app\modules\admin\models\Order */
 
-$this->title = 'Update Oder: ' . $model->name;
+$this->title = 'Update Order: ' . $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Oders', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
 $this->params['breadcrumbs'][] = 'Update';

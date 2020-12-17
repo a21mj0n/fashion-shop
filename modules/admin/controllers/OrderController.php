@@ -3,14 +3,14 @@
 namespace app\modules\admin\controllers;
 
 use Yii;
-use app\modules\admin\models\Oder;
+use app\modules\admin\models\Order;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * OrderController implements the CRUD actions for Oder model.
+ * OrderController implements the CRUD actions for Order model.
  */
 class OrderController extends Controller
 {
@@ -30,13 +30,13 @@ class OrderController extends Controller
     }
 
     /**
-     * Lists all Oder models.
+     * Lists all Order models.
      * @return mixed
      */
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
-            'query' => Oder::find(),
+            'query' => Order::find(),
         ]);
 
         return $this->render('index', [
@@ -45,7 +45,7 @@ class OrderController extends Controller
     }
 
     /**
-     * Displays a single Oder model.
+     * Displays a single Order model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -58,13 +58,13 @@ class OrderController extends Controller
     }
 
     /**
-     * Creates a new Oder model.
+     * Creates a new Order model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Oder();
+        $model = new Order();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -76,7 +76,7 @@ class OrderController extends Controller
     }
 
     /**
-     * Updates an existing Oder model.
+     * Updates an existing Order model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -96,7 +96,7 @@ class OrderController extends Controller
     }
 
     /**
-     * Deletes an existing Oder model.
+     * Deletes an existing Order model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -110,15 +110,15 @@ class OrderController extends Controller
     }
 
     /**
-     * Finds the Oder model based on its primary key value.
+     * Finds the Order model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Oder the loaded model
+     * @return Order the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Oder::findOne($id)) !== null) {
+        if (($model = Order::findOne($id)) !== null) {
             return $model;
         }
 

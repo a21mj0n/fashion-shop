@@ -15,14 +15,14 @@ use Yii;
  * @property int $shipment_address
  * @property string $status
  */
-class Oder extends \yii\db\ActiveRecord
+class Order extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'oder';
+        return 'order';
     }
 
     /**
@@ -32,7 +32,7 @@ class Oder extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'user_id', 'amount', 'sum', 'shipment_address', 'status'], 'required'],
-            [['name', 'user_id', 'amount', 'sum', 'shipment_address'], 'integer'],
+            [['user_id', 'amount', 'sum'], 'integer'],
             [['status'], 'string', 'max' => 255],
         ];
     }

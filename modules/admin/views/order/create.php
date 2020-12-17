@@ -3,9 +3,9 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\modules\admin\models\Oder */
+/* @var $model app\modules\admin\models\Order */
 
-$this->title = 'Create Oder';
+$this->title = 'Create Order';
 $this->params['breadcrumbs'][] = ['label' => 'Oders', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
